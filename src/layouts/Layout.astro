@@ -7,35 +7,41 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="ca">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="AI Portfolio Blog" />
+		<meta name="description" content="Joan Lladó - Deep Learning Engineer Portfolio" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
+        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-slate-50 text-slate-800 font-['Inter'] antialiased">
-        <div class="max-w-3xl mx-auto px-6 py-12">
-            <header class="mb-16 flex justify-between items-center">
-                <a href="/" class="text-xl font-bold tracking-tight text-slate-900 hover:text-blue-600 transition">
-                    El Teu Nom
+	<body class="bg-white text-slate-900 font-['Inter'] antialiased selection:bg-indigo-100 selection:text-indigo-700">
+        
+        <div class="fixed inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+        <div class="max-w-3xl mx-auto px-6 md:px-12 py-12 md:py-20">
+            <header class="mb-20 flex justify-between items-baseline">
+                <a href="/" class="text-lg font-bold tracking-tight text-slate-900 hover:text-indigo-600 transition">
+                    Joan Lladó
                 </a>
-                <nav class="space-x-6 text-sm font-medium text-slate-500">
-                    <a href="/" class="hover:text-slate-900 transition">Inici</a>
-                    <a href="/blog" class="hover:text-slate-900 transition">Blog</a>
-                    <a href="https://github.com/el-teu-usuari" target="_blank" class="hover:text-slate-900 transition">GitHub</a>
+                <nav class="flex gap-6 text-sm font-medium text-slate-500">
+                    <a href="/" class="hover:text-indigo-600 transition">Home</a>
+                    <a href="/blog" class="hover:text-indigo-600 transition">Research Notes</a>
+                    <a href="https://github.com/llad0" target="_blank" class="hover:text-indigo-600 transition">GitHub</a>
                 </nav>
             </header>
             
             <slot />
 
-            <footer class="mt-20 pt-8 border-t border-slate-200 text-center text-slate-400 text-sm">
-                © {new Date().getFullYear()} Deep Learning Engineer. Made with astro.
+            <footer class="mt-32 pt-8 border-t border-slate-100 flex justify-between text-xs text-slate-400 font-['JetBrains_Mono']">
+                <span>© {new Date().getFullYear()} Joan Lladó</span>
+                <span>Barcelona, Spain</span>
             </footer>
         </div>
 	</body>

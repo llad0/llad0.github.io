@@ -4,34 +4,91 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Joan Lladó | Deep Learning Engineer">
 	<main>
-        <section class="mb-16">
-            <h1 class="text-4xl font-bold text-slate-900 mb-4">
-                Deep Learning Engineer & <br/>
-                AI Researcher.
+        <section class="mb-24">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-medium tracking-wide text-indigo-500 uppercase bg-indigo-50 rounded-full">
+                Open to Work
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
+                Engineering intelligence,<br class="hidden md:block" /> 
+                one layer at a time.
             </h1>
-            <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
-                WIP
+            <p class="text-lg text-slate-600 leading-relaxed max-w-xl mb-8">
+                I am a <strong>Deep Learning Engineer</strong> & Researcher based in Barcelona. 
+                I graduated in AI and currently focus on re-implementing state-of-the-art architectures 
+                to deeply understand the math behind the magic.
             </p>
-            <div class="mt-6">
-                <a href="mailto:joanllado123@gmail.com" class="inline-block bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-700 transition">
-                    Contact me
+            <div class="flex gap-4">
+                <a href="mailto:your.email@example.com" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-700 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                    Contact Me
+                </a>
+                <a href="https://github.com/llad0" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition">
+                    View GitHub
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <h2 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-8 font-['JetBrains_Mono']">Selected Projects</h2>
+            
+            <div class="grid gap-8">
+                <a href="https://github.com/llad0/transformer-impl" target="_blank" class="group block">
+                    <article class="p-6 -mx-6 rounded-2xl hover:bg-slate-50 transition duration-300 border border-transparent hover:border-slate-100">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">Transformer from Scratch</h3>
+                            <span class="text-slate-400 group-hover:text-indigo-600 transition">↗</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            A full implementation of the "Attention is All You Need" paper using raw PyTorch. 
+                            Focusing on matrix dimensionality and multi-head attention mechanisms without using `nn.Transformer`.
+                        </p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="px-2 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-md font-['JetBrains_Mono']">PyTorch</span>
+                            <span class="px-2 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-md font-['JetBrains_Mono']">NLP</span>
+                            <span class="px-2 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-md font-['JetBrains_Mono']">Research</span>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#" class="group block">
+                    <article class="p-6 -mx-6 rounded-2xl hover:bg-slate-50 transition duration-300 border border-transparent hover:border-slate-100">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">Medical X-Ray Classification</h3>
+                            <span class="text-slate-400 group-hover:text-indigo-600 transition">↗</span>
+                        </div>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Developed a CNN architecture to detect pneumonia from chest X-rays with 94% accuracy. 
+                            Utilized transfer learning (ResNet50) and extensive data augmentation techniques.
+                        </p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="px-2 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-md font-['JetBrains_Mono']">Computer Vision</span>
+                            <span class="px-2 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-md font-['JetBrains_Mono']">TensorFlow</span>
+                        </div>
+                    </article>
                 </a>
             </div>
         </section>
 
         <section>
-            <h2 class="text-2xl font-bold mb-6 text-slate-900">Projects</h2>
-            <div class="grid gap-6 md:grid-cols-2">
-                <article class="border border-slate-200 p-6 rounded-xl hover:shadow-md transition bg-white">
-                    <h3 class="font-bold text-lg mb-2">WIP</h3>
-                    <p class="text-slate-600 text-sm mb-4">WIP.</p>
-                    <div class="flex gap-3 text-sm font-medium">
-                        <a href="#" class="text-blue-600 hover:underline">Demo →</a>
-                        <a href="#" class="text-slate-500 hover:text-slate-800">GitHub</a>
-                    </div>
-                </article>
-                
-            </div>
+            <h2 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-8 font-['JetBrains_Mono']">Recent Writing</h2>
+            
+            <ul class="space-y-6">
+                <li>
+                    <a href="/blog/transformers-implementation" class="group flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                        <h4 class="text-base font-medium text-slate-800 group-hover:text-indigo-600 transition">
+                            Understanding Self-Attention: A Mathematical Approach
+                        </h4>
+                        <span class="text-sm text-slate-400 font-['JetBrains_Mono'] shrink-0">Nov 2025</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="group flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                        <h4 class="text-base font-medium text-slate-800 group-hover:text-indigo-600 transition">
+                            Why your Loss Function isn't converging
+                        </h4>
+                        <span class="text-sm text-slate-400 font-['JetBrains_Mono'] shrink-0">Oct 2025</span>
+                    </a>
+                </li>
+            </ul>
         </section>
 	</main>
 </Layout>
